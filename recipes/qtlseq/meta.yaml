@@ -1,6 +1,6 @@
 {% set name = "qtlseq" %}
-{% set version = "2.0.4" %}
-{% set sha256 = "8515e7c1fc5201b29918aa6988d7b906221ddcc9880d128d2c6bcf9fc33dfbf9" %}
+{% set version = "2.0.7" %}
+{% set sha256 = "0f8a6b986ee9d69e36974f7e03922ff19c894baef43bc67b4d1dc0dd7ebc980b" %}
 
 package:
   name: {{ name|lower }}
