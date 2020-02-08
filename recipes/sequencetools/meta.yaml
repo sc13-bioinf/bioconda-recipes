@@ -1,29 +1,21 @@
 {% set name = "sequencetools" %}
-{% set version = "1.4.0" %}
-{% set md5 = "af9f4df893bd0047ef10cbae30846bb0" %}
+{% set version = "1.4.0.5" %}
+{% set md5 = "399df2fcea0a6cb0d4f5cb1e6b4b67bc" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://github.com/stschiff/sequenceTools/archive/v{{ version }}.tar.gz
+  url: https://github.com/gitter-bioinf/sequenceTools/releases/download/v{{ version }}-test/sequencetools_static.tar.gz
   md5: {{ md5 }}
 
 build:
-  number: 1
-  skip: True  #  [osx]
+  number: 0
+  skip: True # [osx]
+  binary_relocation: False
 
 requirements:
-  build:
-    - {{ compiler('c') }}
-  host:
-    - stack >=1.7.1
-    - zlib
-    - wget
-    - gmp
-    - perl 
-    - xz
   run:
     - zlib
     - xz
